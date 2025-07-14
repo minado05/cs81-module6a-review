@@ -39,6 +39,12 @@ Playlist.prototype.listSongs = function () {
   console.log("Songs:", this.songs.join(", ")); //use the join method from array songs to combine all array elements (the songs) together and output it
 };
 
+//New method to extend object's behavior
+Playlist.prototype.deleteSong = function (songTitle) {
+  this.songs = this.songs.filter((element) => element != songTitle);
+  console.log(songTitle, " deleted from playlist");
+};
+
 let myMix = new Playlist("My Chill Mix");
 myMix.addSong("Lofi Study");
 myMix.addSong("Chillhop Beats");
