@@ -29,6 +29,9 @@ Playlist.prototype.skipSong = function () {
     console.log("No more songs to skip.");
   }
 };
+// -- Improvement Suggestion --
+/* Instead of using shift to remove the song completely from the playlist,  we can modify this function to set currentSong to the next song(next index) in the playlist. We would then have to modify the if condition to make sure that we are not out of bound. If(this.songs.currentIndex + 1 < this.songs.length) {...}
+ */
 
 //list all songs in playlist
 Playlist.prototype.listSongs = function () {
